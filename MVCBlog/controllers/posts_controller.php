@@ -4,18 +4,18 @@
 function index() {
     // On stocke les posts dans une variable tableau
     $posts = Post::all();
-    require_once('views/posts/index.php');
+    require_once('../views/posts/index.php');
 }
 
 function show() {
     // On s'attend à une url de la forme ?controller=posts&action=show&id=x
     // sans id, on redirige vers la page d'erreur puisqu'on ne peut rien faire sans
     if (!isset($_GET['id'])){
-        require_once('views/pages/error.php');die();}
+        require_once('../views/pages/error.php');die();}
 
     // on utilise l'id fourni pour obtenir le post correspondant
     $post = Post::find($_GET['id']);
-    require_once('views/posts/show.php');
+    require_once('../views/posts/show.php');
 }
 
 function write() {
@@ -39,7 +39,7 @@ function actor($action) {
             //On est obligé d'appeler directement error.php, si on appel call()
             // on créé un conflit sur actor() qui est présent dans les deux
             // sous-contrôleurs inclus
-            require_once('views/pages/error.php');
+            require_once('../views/pages/error.php');
             break;
 
     }

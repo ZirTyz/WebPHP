@@ -1,5 +1,5 @@
 <?php
-require_once('models/connection.php');
+require_once('../models/connection.php');
 
 // Un post d'un blog
 class Post {
