@@ -5,7 +5,8 @@ class Db {
   // Instance unique de la classe
   private static $instance = NULL;
   // Chemin vers le fichier de la BD
-  const dbPath = 'sqlite:models/blog.db';
+
+  // const dbPath = $config['path'];
 
   // Acces à l'instance par une méthode de classe : utiliser la syntaxe Db::getInstance()
   public static function getInstance(): PDO {
@@ -14,10 +15,13 @@ class Db {
     // Si l'objet est déjà crée, retourne simmplement sa valeur, sinon crée l'objet
     if (!isset(self::$instance)) {
       try {
-        self::$instance = new PDO(self::dbPath);
+        
+        global $config;
+
+        self::$instance = new PDO($config['path']);
         self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       } catch (Exception $e) {
-        die("erreur de connexion '".self::dbPath."' : ".$e->getMessage());
+        die("erreur de connexion '".self::$config['path']."' : ".$e->getMessage());
       }
     }
     return self::$instance;

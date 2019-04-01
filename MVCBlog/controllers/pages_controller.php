@@ -6,15 +6,15 @@ function home() {
     //valeurs en dur pour les tests :
     $first_name = 'Jon';
     $last_name = 'Snow';
-    require_once('views/pages/home.php');
+    require_once('../views/pages/home.php');
 }
 
 function error() {
-    require_once('views/pages/error.php');
+    require_once('../views/pages/error.php');
 }
 
 function write() {
-    require_once('views/pages/saisir.php'); // Rajouter une valeur "personne" pour spécialiser le nom.
+  require_once('views/pages/saisir.php'); // Rajouter une valeur "personne" pour spécialiser le nom.
     if(isset($_GET['action']))
       $act = $_GET['action'];
       if ($act == 'Enregistrer') {
