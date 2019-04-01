@@ -3,3 +3,18 @@ header nav ul {
   margin : 0px;
   list-style-type: none;
 }
+
+header nav li{
+  display : inline-block;
+
+  width : 100px;
+  height: 40px;
+  margin:0px;
+  padding: 0px;
+  border-right: 1px solid BLACK;
+}
+
+header nav li a {
+  text-decoration: none;
+
+}

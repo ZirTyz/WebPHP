@@ -5,7 +5,7 @@
         </head>
         <body>
             <header>
-              <link rel="stylesheet" href="../css/menu.css">
+              <link rel="stylesheet" href="css/menu.css">
               <nav>
                 <ul>
                   <li><a href='../controllers/main.ctrl.php'>Accueil</a></li>
