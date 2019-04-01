@@ -14,9 +14,10 @@ function error() {
 }
 
 function write() {
-    require_once('../views/pages/saisir.php'); // Rajouter une valeur "personne" pour spécialiser le nom.
+    require_once('../views/pages/saisir.php?'); // Rajouter une valeur "personne" pour spécialiser le nom.
     if(isset($_GET['action']))
       $act = $_GET['action'];
+      var_dump($act);
       if ($act == 'Enregistrer') {
         require_once('?controller=posts&action=write');
       }
