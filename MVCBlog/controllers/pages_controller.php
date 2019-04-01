@@ -21,7 +21,7 @@ function write() {
       if ($act == 'Enregistrer') {
         require_once('?controller=posts&action=write');
       }
-      if ($act == 'Accueil') {
+      if ($act == 'Annuler') {
         require_once('.');
       }
 }
