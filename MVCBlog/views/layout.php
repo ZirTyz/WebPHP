@@ -2,10 +2,11 @@
 <DOCTYPE html>
     <html>
         <head>
+          <link rel="stylesheet" href="../views/css/menu.css">
         </head>
         <body>
             <header>
-              <link rel="stylesheet" href="css/menu.css">
+
               <nav>
                 <ul>
                   <li><a href='../controllers/main.ctrl.php'>Accueil</a></li>

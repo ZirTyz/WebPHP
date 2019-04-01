@@ -1,10 +1,10 @@
-header nav ul {
+body header nav ul {
   padding: 0px;
   margin : 0px;
   list-style-type: none;
 }
 
-header nav li{
+body header nav li{
   display : inline-block;
 
   width : 100px;
@@ -14,7 +14,7 @@ header nav li{
   border-right: 1px solid BLACK;
 }
 
-header nav li a {
+body header nav li a {
   text-decoration: none;
 
 }
