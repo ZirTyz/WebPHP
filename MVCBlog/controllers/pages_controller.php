@@ -19,10 +19,10 @@ function write() {
       $act = $_GET['action'];
       var_dump($act);
       if ($act == 'Enregistrer') {
-        require_once('?controller=posts&action=write');
+        require_once('main.ctrl.php?controller=posts&action=write');
       }
       if ($act == 'Annuler') {
-        require_once('.');
+        require_once('main.ctrl.php');
       }
 }
 

@@ -21,6 +21,9 @@ function show() {
 function write() {
     //Méthode pour enregistrer le post courant
     // Appel du constructeur de post
+    $post = $_GET['post'];
+    $Savepost = new Post('Singe',$post,15);
+    $Savepost->write();
   //////////////// A COMPLETER  ////////////////
 }
 
