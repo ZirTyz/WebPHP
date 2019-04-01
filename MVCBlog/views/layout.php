@@ -11,7 +11,7 @@
                 <ul>
                   <li><a href='../controllers/main.ctrl.php'>Accueil</a></li>
                   <li><a href='?controller=posts&action=index'>Posts</a></li>
-                  <li><a href='?controller=pages&action=write'>Saisir un post</a></li>
+                  <li><a href='?controller=pages&action=write'>Saisir</a></li>
                 </ul>
               </nav>
 

@@ -2,19 +2,31 @@ body header nav ul {
   padding: 0px;
   margin : 0px;
   list-style-type: none;
+  background-color: #333333;
 }
 
 body header nav li{
   display : inline-block;
-
+  text-align: center;
   width : 100px;
   height: 40px;
   margin:0px;
   padding: 0px;
-  border-right: 1px solid BLACK;
+  border-right: 1px solid #CCCCCC;
+  line-height: :40px;
+
+}
+
+body header nav li :hover{
+  background-color: #3388BB;
+  width : 100px;
+  height: 40px;
+  margin:0px;
+  padding: 0px;
 }
 
 body header nav li a {
+  display: block;
   text-decoration: none;
-
+  color: #FFFFFF;
 }
