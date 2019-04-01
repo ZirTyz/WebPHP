@@ -14,7 +14,15 @@ function error() {
 }
 
 function write() {
-  //////////////// A COMPLETER ////////////////
+    require_once('views/pages/saisir.php'); // Rajouter une valeur "personne" pour spécialiser le nom.
+    if(isset($_GET['action']))
+      $act = $_GET['action'];
+      if ($act == 'Enregistrer') {
+        require_once('?controller=posts&action=write');
+      }
+      if ($act == 'Accueil') {
+        require_once('.');
+      }
 }
 
 function actor($action) {

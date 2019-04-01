@@ -20,7 +20,7 @@ function show() {
 
 function write() {
     //Méthode pour enregistrer le post courant
-
+    // Appel du constructeur de post
   //////////////// A COMPLETER  ////////////////
 }
 
