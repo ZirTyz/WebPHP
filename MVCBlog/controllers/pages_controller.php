@@ -29,7 +29,8 @@ function write() {
 }
 ////////////////////////////////////////////////////////////////////////////////
 function saveP(){
-  require_once('?controller=posts&action=write');
+
+  require_once('routes.php');
   // require_once('../views/pages/savePost.php');
 }
 
@@ -48,7 +49,7 @@ function actor($action) {
         case 'error':
             error();
             break;
-        case 'Valider'
+        case 'Valider':
             saveP();
             break;
         case 'inscription':
