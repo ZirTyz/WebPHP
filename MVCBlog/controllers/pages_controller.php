@@ -23,7 +23,10 @@ function write() {
     if ($act == 'Annuler') {
       require_once('main.ctrl.php');
     }
-    require_once('../views/pages/saisir.php'); // Rajouter une valeur "personne" pour spécialiser le nom.
+    else {
+      require_once('../views/pages/saisir.php'); // Rajouter une valeur "personne" pour spécialiser le nom.
+    }
+
 
 }
 
