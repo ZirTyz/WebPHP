@@ -27,6 +27,10 @@ function write() {
 
 }
 
+function inscription(){
+  require_once('../views/pages/formul-inscription.php');
+}
+
 function actor($action) {
     switch ($action) {
         case 'home':
@@ -37,6 +41,9 @@ function actor($action) {
             break;
         case 'error':
             error();
+            break;
+        case 'inscription':
+            inscription();
             break;
         default:
             error();
