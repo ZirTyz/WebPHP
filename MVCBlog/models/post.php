@@ -46,9 +46,18 @@ class Post {
   // Enregistre le post dans la base, et renvoie vrai si l'écriture a réussi
   public function write(): bool {
     ////////////////// QC05 : A COMPLETER ////////////////
+    $db = Db::getInstance();
+    $req = 'INSERT INTO posts(id,author,content)' .'VALUES(:id,:author,:content)';
+    $ex = $db->prepare($req);
+    $ex->execute([':id' => $this->id, ':author' => $this->author, ':content' => $this->content]);
     return TRUE;
   }
 
 }
+// $config['path'] = 'sqlite:../models/blog.db';
+// $po = new Post('singe','salutTest1',123);
+// var_dump($po);
+// $po->write();
+
 
 ?>

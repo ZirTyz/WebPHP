@@ -15,13 +15,13 @@ class Db {
     // Si l'objet est déjà crée, retourne simmplement sa valeur, sinon crée l'objet
     if (!isset(self::$instance)) {
       try {
-        
+
         global $config;
 
         self::$instance = new PDO($config['path']);
         self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       } catch (Exception $e) {
-        die("erreur de connexion '".self::$config['path']."' : ".$e->getMessage());
+        die("erreur de connexion '".$config['path']."' : ".$e->getMessage());
       }
     }
     return self::$instance;

@@ -10,7 +10,11 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
     $controller = $_GET['controller'];
     $action = $_GET['action'];
 
-} else {
+} elseif (!isset($controller) && isset($_GET['action'])) {
+  $controller = 'pages';
+  $action = $_GET['action'];
+}
+ else {
     //... sinon on donne des valeurs par défaut
     $controller = 'pages';
     $action = 'home';

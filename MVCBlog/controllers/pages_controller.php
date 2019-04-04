@@ -16,10 +16,9 @@ function error() {
 function write() {
   if(isset($_GET['action']))
     $act = $_GET['action'];
-    var_dump($act);
-    if ($act == 'Enregistrer') {
-      require_once('main.ctrl.php?controller=posts&action=write');
-    }
+    // if ($act == 'Valider') {
+    //   require_once('main.ctrl.php?controller=posts&action=write');
+    // }
     if ($act == 'Annuler') {
       require_once('main.ctrl.php');
     }
@@ -27,7 +26,11 @@ function write() {
       require_once('../views/pages/saisir.php'); // Rajouter une valeur "personne" pour spécialiser le nom.
     }
 
-
+}
+////////////////////////////////////////////////////////////////////////////////
+function saveP(){
+  require_once('?controller=posts&action=write');
+  // require_once('../views/pages/savePost.php');
 }
 
 function actor($action) {
@@ -40,6 +43,9 @@ function actor($action) {
             break;
         case 'error':
             error();
+            break;
+        case 'Valider':
+            saveP();
             break;
         default:
             error();
