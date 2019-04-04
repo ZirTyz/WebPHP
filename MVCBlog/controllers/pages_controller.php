@@ -33,6 +33,10 @@ function saveP(){
   // require_once('../views/pages/savePost.php');
 }
 
+function inscription(){
+  require_once('../views/pages/formul-inscription.php');
+}
+
 function actor($action) {
     switch ($action) {
         case 'home':
@@ -44,8 +48,11 @@ function actor($action) {
         case 'error':
             error();
             break;
-        case 'Valider':
+        case 'Valider'
             saveP();
+            break;
+        case 'inscription':
+            inscription();
             break;
         default:
             error();
