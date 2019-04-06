@@ -11,8 +11,13 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
     $action = $_GET['action'];
 
 } elseif (!isset($controller) && isset($_POST['action'])) {
-  $controller = 'posts';
   $action = $_POST['action'];
+  if ($action =='Annuler') {
+    $action ='home';
+    $controller = 'pages';
+  } elseif ($action =='Valider') {
+    $controller ='posts';
+  }
 }
  else {
     //... sinon on donne des valeurs par défaut

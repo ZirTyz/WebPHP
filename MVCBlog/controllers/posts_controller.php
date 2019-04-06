@@ -22,7 +22,7 @@ function write() {
     //Méthode pour enregistrer le post courant
     // Appel du constructeur de post
     $post = $_POST['post'];
-    $Savepost = new Post('Singe','test',155);
+    $Savepost = new Post('Singe',$post);
     $Savepost->write();
 
   //////////////// A COMPLETER  ////////////////
@@ -36,8 +36,7 @@ function actor($action) {
         case 'show':
             show();
             break;
-        case 'write':
-        var_dump($test);
+        case 'Valider':
             write();
             break;
         default:

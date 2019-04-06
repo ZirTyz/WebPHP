@@ -53,6 +53,12 @@ class Post {
     return TRUE;
   }
 
+  // Fonction qui renvoie la dernière valeur d'id +1
+  public function getNewId()
+  {
+    // code...
+  }
+
 }
 // $config['path'] = 'sqlite:../models/blog.db';
 // $po = new Post('singe','salutTest1',123);
