@@ -20,7 +20,7 @@
             </header>
 
             <?php // var_dump($controller); var_dump($action);
-          //  require_once("../controllers/routes.php"); ?>
+            require_once("../controllers/routes.php"); ?>
 
             <footer>
               <?= $config['licence'] ?>
