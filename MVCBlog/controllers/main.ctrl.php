@@ -11,7 +11,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
     $action = $_GET['action'];
 
 } elseif (!isset($controller) && isset($_POST['action'])) {
-  $controller = 'pages';
+  $controller = 'posts';
   $action = $_POST['action'];
 }
  else {
