@@ -24,8 +24,29 @@ function write() {
     $post = $_POST['post'];
     $Savepost = new Post('Singe',$post);
     $Savepost->write();
-
+}
   //////////////// A COMPLETER  ////////////////
+function Edit($action)
+{
+  $post = Post::find($_GET['id']);
+  if ($action == 'Edit') {
+    require_once('../views/pages/modifierP.php');
+  }
+  elseif ($action =='Delete') {
+    $post->Delete();
+  }
+
+}
+
+function modif()
+{
+  if (isset($_POST['post'])) {
+    $content = $_POST['post'];
+    $Savepost = new Post('Singe',$content,$_GET['id']);
+    $Savepost->Edit();
+  }
+
+
 }
 
 function actor($action) {
@@ -39,6 +60,11 @@ function actor($action) {
         case 'Valider':
             write();
             break;
+        case 'Edit':
+            $action = $_POST['action'];
+            edit($action);
+        case 'Modifier':
+            modif();
         default:
             //On est obligé d'appeler directement error.php, si on appel call()
             // on créé un conflit sur actor() qui est présent dans les deux

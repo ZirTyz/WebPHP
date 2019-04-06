@@ -53,11 +53,25 @@ class Post {
     return TRUE;
   }
 
-  // Fonction qui renvoie la dernière valeur d'id +1
-  public function getNewId()
+  // Fonction qui supprime un post
+  public function Delete():bool
   {
-    // code...
+    $db = Db::getInstance();
+    $req ='DELETE FROM posts where id= :id';
+    $ex = $db->prepare($req);
+    $ex->execute([':id' => $this->id]);
+    return TRUE;
   }
+  // Fonction qui modifie un post
+  public function Edit():bool
+  {
+    $db = Db::getInstance();
+    $req ='UPDATE posts set content = :content where id= :id';
+    $ex = $db->prepare($req);
+    $ex->execute([':id' => $this->id, ':content' => $this->content]);
+    return TRUE;
+  }
+
 
 }
 // $config['path'] = 'sqlite:../models/blog.db';

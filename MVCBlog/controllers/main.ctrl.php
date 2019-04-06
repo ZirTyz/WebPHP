@@ -15,7 +15,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
   if ($action =='Annuler') {
     $action ='home';
     $controller = 'pages';
-  } elseif ($action =='Valider') {
+  } else  {
     $controller ='posts';
   }
 }
